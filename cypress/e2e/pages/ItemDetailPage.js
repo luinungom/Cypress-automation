@@ -1,4 +1,6 @@
-class ItemDetailPage {
+import BasePage from './BasePage';
+
+class ItemDetailPage extends BasePage{
   // locators
 
   get itemContainer() {

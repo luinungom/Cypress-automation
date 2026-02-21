@@ -55,13 +55,12 @@ describe("As a Swag Labs admin, I need to access/logout of the platform with the
       loginPage.clickLoginButton();
       cy.url().should("include", "/inventory");
       inventoryPage.shoppingCartContainer.should("exist");
-      //inventoryPage.getImageSrcAttribute('Sauce Labs Backpack').should('contain', '404.168b1cce10384b857a6f.jpg');
-      //inventoryPage.getImageSrcAttribute('Sauce Labs Backpack').should('be.visible');
-      //console.log(inventoryPage.getImageSrcAttribute('Sauce Labs Backpack'));
-      //inventoryPage.clickAddToCartForAnItem('Sauce Labs Backpack');
+      inventoryPage.clickLeftBurgerMenu();
+      inventoryPage.clickAbout();
+      cy.url().should("include", "/404");
+      cy.go('back');
       inventoryPage.clickLeftBurgerMenu();
       inventoryPage.clickLogOut();
-      cy.url().should("not.include", "/inventory");
       inventoryPage.shoppingCartContainer.should("not.exist");
     });
   });

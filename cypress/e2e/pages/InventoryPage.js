@@ -1,20 +1,10 @@
-class InventoryPage {
+import BasePage from './BasePage';
+
+class InventoryPage extends BasePage {
   //locators
 
   get inventoryContainer() {
     return cy.get("#inventory_container");
-  }
-
-  get shoppingCartContainer() {
-    return cy.get("#shopping_cart_container");
-  }
-
-  get leftBurguerMenu() {
-    return cy.get("#react-burger-menu-btn")
-  }
-
-  get logOutFromBurgerMenu() {
-    return cy.get("#logout_sidebar_link")
   }
 
   getInventoryItem(itemName) {
@@ -38,15 +28,6 @@ class InventoryPage {
     //return this.getInventoryItem(itemName).find(".inventory_item_img").invoke('attr', 'src');
     return this.getInventoryItem(itemName).find(".inventory_item_img");
     }
-
-  clickLeftBurgerMenu() {
-    this.leftBurguerMenu.click();
-  }
-
-  clickLogOut() {
-    this.logOutFromBurgerMenu.click();
-  }
-
 
 }
 
