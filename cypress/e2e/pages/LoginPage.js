@@ -1,5 +1,6 @@
 class LoginPage {
   //locators
+
   get usernameInputId() {
     return cy.get("#user-name");
   }
@@ -12,7 +13,12 @@ class LoginPage {
     return cy.get("#login-button");
   }
 
+  get loginErrorMessage() {
+    return cy.get(".error-message-container.error");
+  }
+
   //actions
+
   insertUserName(username) {
     this.usernameInputId.type(username);
   }
@@ -25,4 +31,5 @@ class LoginPage {
     this.loginButtonId.click();
   }
 }
+
 export default LoginPage;
