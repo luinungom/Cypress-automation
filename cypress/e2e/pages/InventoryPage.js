@@ -16,7 +16,14 @@ class InventoryPage extends BasePage {
   // actions
 
   clickAddToCartForAnItem(itemName) {
-    this.getInventoryItem(itemName).find(".btn.btn_primary.btn_small.btn_inventory")
+    this.getInventoryItem(itemName)
+      .find(".btn.btn_primary.btn_small.btn_inventory")
+      .click();
+  }
+
+  clickRemoveForAnItem(itemName) {
+    this.getInventoryItem(itemName)
+      .find(".btn.btn_secondary.btn_small.btn_inventory")
       .click();
   }
 
@@ -27,8 +34,7 @@ class InventoryPage extends BasePage {
   getImageSrcAttribute(itemName) {
     //return this.getInventoryItem(itemName).find(".inventory_item_img").invoke('attr', 'src');
     return this.getInventoryItem(itemName).find(".inventory_item_img");
-    }
-
+  }
 }
 
 export default InventoryPage;

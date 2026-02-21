@@ -57,6 +57,7 @@ describe("As a Swag Labs admin, I need to access/logout of the platform with the
       inventoryPage.shoppingCartContainer.should("exist");
       inventoryPage.clickLeftBurgerMenu();
       inventoryPage.clickAbout();
+      // with this user, the about page shows a 404 error
       cy.url().should("include", "/404");
       cy.go('back');
       inventoryPage.clickLeftBurgerMenu();

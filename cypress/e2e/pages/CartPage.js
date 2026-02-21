@@ -10,6 +10,17 @@ class CartPage extends BasePage {
   getInventoryItemInCart(itemName) {
     return cy.contains(".inventory_item_name", itemName).parents(".cart_item");
   }
+
+  clickRemoveItem(itemName) {
+   this.getInventoryItemInCart(itemName)
+      .find(".btn.btn_secondary.btn_small.cart_button")
+      .click();
+  }
+
+  clickCheckoutButton() {
+    this.checkoutButton.click();
+  }
+
 }
 
 export default CartPage;
