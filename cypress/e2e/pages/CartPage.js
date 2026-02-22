@@ -12,7 +12,7 @@ class CartPage extends BasePage {
   }
 
   clickRemoveItem(itemName) {
-   this.getInventoryItemInCart(itemName)
+    this.getInventoryItemInCart(itemName)
       .find(".btn.btn_secondary.btn_small.cart_button")
       .click();
   }
@@ -21,6 +21,9 @@ class CartPage extends BasePage {
     this.checkoutButton.click();
   }
 
+  getItemPrice(itemName) {
+    return this.getInventoryItemInCart(itemName).find(".inventory_item_price");
+  }
 }
 
 export default CartPage;

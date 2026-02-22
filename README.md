@@ -78,7 +78,18 @@ Ensure the Swag Labs standard_user is able to:
 6. See a confirmation page
 
 # New User Story and Acceptance Criteria
-Section where the new user story and its acceptance criteria of the challenge will be defined.
+As a Swag Labs standard_user, I need to verify that prices are the correct ones throught the E2E buying process in the Swag Labs ordering platform.
+
+## Acceptance Criteria
+1. Log in to Swag Labs
+2. Add to cart one or more items
+3. Navigate to the shopping cart
+4. Verify items prices are similars form the ones added in step 2
+5. Checkout
+6. Complete a form with personal data
+7. Verify items prices are similars form the ones added in step 2
+8. See an overview of the order, total prices must equal to all items's prices summatory
+
 
 # Test Cases
 Section where the different test cases of the challenge will be defined.

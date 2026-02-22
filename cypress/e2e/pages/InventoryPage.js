@@ -1,4 +1,4 @@
-import BasePage from './BasePage';
+import BasePage from "./BasePage";
 
 class InventoryPage extends BasePage {
   //locators
@@ -31,9 +31,9 @@ class InventoryPage extends BasePage {
     this.getInventoryItem(itemName).find(".inventory_item_name ").click();
   }
 
-  getImageSrcAttribute(itemName) {
-    //return this.getInventoryItem(itemName).find(".inventory_item_img").invoke('attr', 'src');
-    return this.getInventoryItem(itemName).find(".inventory_item_img");
+  getItemPrice(itemName) {
+    return this.getInventoryItem(itemName)
+      .find(".inventory_item_price");
   }
 }
 
