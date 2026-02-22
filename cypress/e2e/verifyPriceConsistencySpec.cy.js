@@ -4,6 +4,10 @@ import CartPage from "./pages/CartPage";
 import CheckOutStepOnePage from "./pages/CheckOutStepOnePage";
 import CheckOutStepTwoPage from "./pages/CheckOutStepTwoPage";
 
+const helpers = {
+  cleanPriceString: (priceString) => parseFloat(priceString.match(/[\d.]+/)[0]),
+};
+
 describe("As a Swag Labs standard_user, I need to verify that prices are the correct ones throught the E2E buying process in the Swag Labs ordering platform.", () => {
   const loginPage = new LoginPage();
   const inventoryPage = new InventoryPage();
@@ -79,6 +83,35 @@ describe("As a Swag Labs standard_user, I need to verify that prices are the cor
           .invoke("text")
           .then((text) => text.trim())
           .should("equal", initalPriceItem2);
+      });
+      // Ahead, all needed logic could be 5 lines in Java/Selenium
+      // Transform items prices
+      cy.get("@initialPriceItem1").then((text) => {
+        const itemPrice1Float = helpers.cleanPriceString(text);
+        cy.wrap(itemPrice1Float).as("itemPrice1Float");
+      });
+
+      cy.get("@initialPriceItem2").then((text) => {
+        const itemPrice1Float = helpers.cleanPriceString(text);
+        cy.wrap(itemPrice1Float).as("itemPrice2Float");
+      });
+
+      // Add both prices and verify total
+      cy.get("@itemPrice1Float").then((itemPrice1Float) => {
+        cy.get("@itemPrice2Float").then((itemPrice2Float) => {
+          const calculatedTotalPriceFloat = itemPrice1Float + itemPrice2Float;
+
+          // Verify total matches the sum
+          checkOutStepTwoPage.subtotalLabel
+            .invoke("text")
+            .then((text) => helpers.cleanPriceString(text))
+            .then((totalPricesFloat) => {
+              expect(totalPricesFloat).to.be.closeTo(
+                calculatedTotalPriceFloat,
+                0.01,
+              );
+            });
+        });
       });
     });
   });

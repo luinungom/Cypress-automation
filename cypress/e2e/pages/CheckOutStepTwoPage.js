@@ -43,7 +43,6 @@ class CheckOutStepTwoPage extends BasePage {
     return this.getdataTest("total-label");
   }
 
-  // Usually I don't use this kind of attributes in Selenium, will do here just for technical review purpouses
   getdataTest(value) {
     return cy.get(`[data-test="${value}"]`);
   }
@@ -65,6 +64,7 @@ class CheckOutStepTwoPage extends BasePage {
   getItemPrice(itemName) {
     return this.getItemContainer(itemName).find(".inventory_item_price");
   }
+
 }
 
 export default CheckOutStepTwoPage;
