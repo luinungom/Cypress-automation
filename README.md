@@ -209,12 +209,35 @@ Section where the different test cases of the challenge will be defined.
 # How to Run the Tests
 Section where the necessary instructions to run the tests will be added.
 
+Using Cypress GUI:
+1. Open a cmd and set it in the project's root folder
+2. Insert command "yarn cypress open"
+3. Navigate in Cypress application and run the different specs
+
+Using terminal all specs:
+1. Open a cmd and set it in the project's root folder
+2. Insert command "yarn run" for running all specs. Add "--headed" at the end for raising a web browser durin execution
+
+Using terminal, selected spec:
+1. Open a cmd and set it in the project's root folder
+2. Insert command "yarn cypress run --spec "cypress/e2e/XXXX.cy.js"" for running all specs. Add "--headed" at the end for raising a web browser durin execution  
+XXXX can be any of the following spec:  
+addProductInTheCartSpec  
+buyProductsSpec  
+loginSpec  
+productDetailSpec  
+removeProductsSpec  
+verifyPriceConsistencySpec
+
 # Git Commands
 Section to add the Git commands used during the challenge.
 
-git status
-git add.
-git commit
+- git clone https://github.com/luinungom/FCM_digital_TC
+- git status
+- git add .
+- git commit -m "lorem Ipsum"
+- git remote -v
+- git push origin main
 
 # Problems
 Section to write down problems you have encountered during the challenge.
