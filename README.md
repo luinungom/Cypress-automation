@@ -216,11 +216,11 @@ Using Cypress GUI:
 
 Using terminal all specs:
 1. Open a cmd and set it in the project's root folder
-2. Insert command "yarn run" for running all specs. Add "--headed" at the end for raising a web browser durin execution
+2. Insert command "yarn run" for running all specs. Add "--headed" at the end for raising a web browser during execution
 
 Using terminal, selected spec:
 1. Open a cmd and set it in the project's root folder
-2. Insert command "yarn cypress run --spec "cypress/e2e/XXXX.cy.js"" for running all specs. Add "--headed" at the end for raising a web browser durin execution  
+2. Insert command "yarn cypress run --spec "cypress/e2e/XXXX.cy.js"" for running all specs. Add "--headed" at the end for raising a web browser during execution  
 XXXX can be any of the following spec:  
 addProductInTheCartSpec  
 buyProductsSpec  
