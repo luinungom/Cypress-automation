@@ -94,6 +94,118 @@ As a Swag Labs standard_user, I need to verify that prices are the correct ones 
 # Test Cases
 Section where the different test cases of the challenge will be defined.
 
+## User Story 1
+
+### Test case 1 - Log in Swag Labs using "standard_user"
+
+| Number | Step | Expected result|
+| :--- | :---- | :--- |
+| 1 | Navigate to "https://www.saucedemo.com" | Page is loaded |
+| 2 | Insert "standard_user" in the Username text field | User name is inserted |
+| 3 | Insert "secret_sauce" in the Password text field | Password is inserted |
+| 4 | Click Login button | User access the application, the Inventory view is loaded |
+| 5 | Click the left upper corner burger button | Navigation menu is visible |
+| 6 | Click in Logout option | User is loged out, the login web is loaded, no error message is visble |
+
+### Test case 2 - Log in Swag Labs using "locked_out_user"
+
+| Number | Step | Expected result|
+| :--- | :---- | :--- |
+| 1 | Navigate to "https://www.saucedemo.com" | Page is loaded |
+| 2 | Insert "locked_out_user" in the Username text field | User name is inserted |
+| 3 | Insert "secret_sauce" in the Password text field | Password is inserted |
+| 4 | Click Login button | Error message "Epic sadface: Sorry, this user has been locked out." is visible |
+
+### Test case 3 - Log in Swag Labs using "problem_user"
+
+| Number | Step | Expected result|
+| :--- | :---- | :--- |
+| 1 | Navigate to "https://www.saucedemo.com" | Page is loaded |
+| 2 | Insert "standard_user" in the Username text field | User name is inserted |
+| 3 | Insert "secret_sauce" in the Password text field | Password is inserted |
+| 4 | Click Login button | User access the application, the Inventory view is loaded |
+| 5 | Click the left upper corner burger button | Navigation menu is visible |
+| 6 | Click About option | Application navigates to a web showing a 404 error message |
+| 7 | Navigate back using browser's functionality | Navigation menu is visible |
+| 8 | Click in Logout option | User is loged out, the login web is loaded, no error message is visble |
+
+### Test case 4 - Log in Swag Labs using "performance_glitch_user"
+
+| Number | Step | Expected result|
+| :--- | :---- | :--- |
+| 1 | Navigate to "https://www.saucedemo.com" | Page is loaded |
+| 2 | Insert "performance_glitch_user" in the Username text field | User name is inserted |
+| 3 | Insert "secret_sauce" in the Password text field | Password is inserted |
+| 4 | Click Login button | Verify it takes more time than ussual. User access the application, the Inventory view is loaded |
+| 4 | Click the left upper corner burger button | Navigation menu is visible |
+| 5 | Click in Logout option | User is loged out, the login web is loaded, no error message is visble |
+
+## User Story 2
+
+### Test case - Open the product detail
+
+| Number | Step | Expected result|
+| :--- | :---- | :--- |
+| 1 | Navigate to "https://www.saucedemo.com" | Page is loaded |
+| 2 | Insert "standard_user" in the Username text field | User name is inserted |
+| 3 | Insert "secret_sauce" in the Password text field | Password is inserted |
+| 4 | Click Login button | User access the application, the Inventory view is loaded |
+| 5 | Click in any product name | Application navigates to the produc detail view. No errors are visible |
+
+## User Story 3
+
+### Test case 3 - Add products to the cart
+
+| Number | Step | Expected result|
+| :--- | :---- | :--- |
+| 1 | Navigate to "https://www.saucedemo.com" | Page is loaded |
+| 2 | Insert "standard_user" in the Username text field | User name is inserted |
+| 3 | Insert "secret_sauce" in the Password text field | Password is inserted |
+| 4 | Click Login button | User access the application, the Inventory view is loaded |
+| 5 | Click in any product Add to cart button | Button text changes to Remove. Upper right cart icon now contains a red badge with the 1 value |
+| 6 | Click in the cart icon | Cart view is loaded, the selected product(s) is included |
+
+## User Story 4
+
+### Test case 4 - Verify remove product functionality
+
+| Number | Step | Expected result|
+| :--- | :---- | :--- |
+| 1 | Navigate to "https://www.saucedemo.com" | Page is loaded |
+| 2 | Insert "standard_user" in the Username text field | User name is inserted |
+| 3 | Insert "secret_sauce" in the Password text field | Password is inserted |
+| 4 | Click Login button | User access the application, the Inventory view is loaded |
+| 5 | Click in any product Add to cart button | Button text changes to Remove. Upper right cart icon now contains a red badge with the 1 value |
+| 6 | Click in the remove button | Button text changes to Add to cart. Upper right cart icon now not contains a red badge |
+| 7 | Click in any product Add to cart button | Button text changes to Remove. Upper right cart icon now contains a red badge with the 1 value |
+| 8 | Click in the selected product | Application navigates to the product detail view. No errors are visible |
+| 9 | Click in the remove button | The product is no longer visible in the detail view |
+| 10 | Click the left upper corner burger button | Navigation menu is visible |
+| 11 | Click in All items option | The Inventory view is loaded |
+| 12 | Click in any product Add to cart button | Button text changes to Remove. Upper right cart icon now contains a red badge with the 1 value |
+| 13 | Click in the upper right cart icon | Application navigates to the product detail view. No errors are visible |
+| 14 | Click in the remove button | The product is no longer visible in the cart view |
+
+### Test case 5 - Buy all the products selected
+
+| Number | Step | Expected result|
+| :--- | :---- | :--- |
+| 1 | Navigate to "https://www.saucedemo.com" | Page is loaded |
+| 2 | Insert "standard_user" in the Username text field | User name is inserted |
+| 3 | Insert "secret_sauce" in the Password text field | Password is inserted |
+| 4 | Click Login button | User access the application, the Inventory view is loaded |
+| 5 | Click in any product Add to cart button | Button text changes to Remove. Upper right cart icon now contains a red badge with the 1 value |
+| 6 | Click in the cart icon | Cart view is loaded, the selected product(s) is included |
+| 7 | Click the Checkout button | View showing personal info to fill is loaded |
+| 8 | Fill First Name, Last Name and Zip/Postal Code using any values | Information is correctly inserted in the fields |
+| 9 | Click Continue button | Application navigates to Overview |
+| 10 | Verify that added product is the one(s) selected in step 5 | Product(s) is correct |
+| 11 | Verify that Payment Info is filled | Payment info is filled |
+| 12 | Verify that Shipping Info is filled | Shipping Info is filled |
+| 13 | Verify that Price Info is filled | Price Info is filled |
+| 14 | Click Finish button | Process is completed, message "Thank you for your order!" is visible. No errors are visible |
+
+
 # How to Run the Tests
 Section where the necessary instructions to run the tests will be added.
 
