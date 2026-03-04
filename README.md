@@ -218,7 +218,7 @@ Section where the necessary instructions to run the tests will be added.
 Prerequisites
 - **Node.js** (v16+)
 - **Yarn** (v1.22+)
-- **Cypress**
+- **Cypress**(15.10.0+)
 
 Git command examples used for the project:
 ```bash
