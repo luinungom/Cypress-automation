@@ -1,6 +1,6 @@
 # Cypress automation example
  
- # URL
+ ## URL
 https://www.saucedemo.com
 
 ## User Story 1
