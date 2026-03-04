@@ -1,24 +1,6 @@
-# FCM Digital - QA Technical Challenge
-Welcome to the FCM Digital QA team technical challenge. The objective of this task is to learn more about your workflow and approach to testing. There is no single correct solution, so please just do your best. 
-
-## Challenge Information
-Create a private repository using this file as the `README.md` and add **josele88**, **ftirador** and **n0tInplace** as collaborators.
-Once you complete the challenge, contact us via email to start the review process.
-The challenge is designed to be done in Cypress, which will be the framework we use at FCM. However, if you feel comfortable with any other framework, feel free to use it as long as the language is JS.
+# Cypress automation example
  
-## Goals
-Given the provided User Stories and their Acceptance Criteria:
- 1. **Define Test Cases:** Write the test cases in the [Test Cases](#test-cases) section of this file.
- 2. **Project Setup:** Create a project and install framework using **YARN**.
- 3. **Automation:** Implement automated tests for the test cases you defined in Step 1.
-    * Ensure the repository includes all necessary code and structure.
-    * Document the steps to execute the tests in the [How to Run the Tests](#how-to-run-the-tests) section.
- 4. **Git History:** Document the Git commands used during the challenge in the [Git Commands](#git-commands) section.
- 5. **New User Story:** Now that you are familiar with the testing portal, propose a new User Story (with its Acceptance Criteria) that covers functionality not mentioned in the challenge in the [New User Story and Acceptance Criteria](#new-user-story-and-acceptance-criteria) section.
- 7. **Feedback:** Document any issues or blockers you encountered during the challenge in the [Problems](#problems) section.
- 
-# Challenge
-## Challenge URL
+ # URL
 https://www.saucedemo.com
 
 ## User Story 1
