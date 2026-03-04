@@ -210,16 +210,3 @@ loginSpec
 productDetailSpec  
 removeProductsSpec  
 verifyPriceConsistencySpec
-
-# Git Commands
-Section to add the Git commands used during the challenge.
-
-- git clone https://github.com/luinungom/FCM_digital_TC
-- git status
-- git add .
-- git commit -m "lorem Ipsum"
-- git remote -v
-- git push origin main
-
-# Problems
-Section to write down problems you have encountered during the challenge.
