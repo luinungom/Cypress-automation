@@ -3,6 +3,30 @@
  ## URL
 https://www.saucedemo.com
 
+---
+
+## Project Structure
+
+```
+Cypress-automation/
+├── README.md
+├── package.json
+├── package-lock.json
+├── yarn.lock
+├── cypress/
+│   ├── cypress.config.js
+│   ├── fixtures/
+│   ├── support/
+│   └── e2e/
+│       ├── loginSpec.cy.js
+│       ├── productDetailSpec.cy.js
+│       ├── addProductInTheCartSpec.cy.js
+│       ├── removeProductsSpec.cy.js
+│       ├── buyProductsSpec.cy.js
+│       └── verifyPriceConsistencySpec.cy.js
+└── node_modules/
+```
+
 ## User Story 1
 As a Swag Labs admin, I need to access/logout of the platform with the 4 different user types.
 
@@ -191,6 +215,26 @@ Section where the different test cases of the challenge will be defined.
 # How to Run the Tests
 Section where the necessary instructions to run the tests will be added.
 
+Prerequisites
+- **Node.js** (v16+)
+- **Yarn** (v1.22+)
+- **Cypress**
+
+Git command examples used for the project:
+```bash
+git clone https://github.com/luinungom/Cypress_automation_example.git
+git status
+git add .
+git commit -m "feat: implementar tests para User Story 1-5"
+git remote -v
+git checkout -b feature/verify-price-consistency
+git pull origin main
+git log --oneline
+git diff
+git stash
+git show -s --format="%H" HEAD
+```
+
 Using Cypress GUI:
 1. Open a cmd and set it in the project's root folder
 2. Insert command "yarn cypress open"
@@ -198,7 +242,7 @@ Using Cypress GUI:
 
 Using terminal all specs:
 1. Open a cmd and set it in the project's root folder
-2. Insert command "yarn run" for running all specs. Add "--headed" at the end for raising a web browser during execution
+2. Insert command "yarn cypress run" for running all specs. Add "--headed" at the end for raising a web browser during execution
 
 Using terminal, selected spec:
 1. Open a cmd and set it in the project's root folder
